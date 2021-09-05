@@ -1,0 +1,90 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.8.0/basic/ckeditor.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div style="margin-top:30px">
+
+                    <h4 style="margin-left: 5%;">Sexo</h4>
+                    <a href="/lista/masculino">
+                        <button type="button" class="btn btn-primary btn-sm">Masculino</button>
+                    </a>
+                    <a href="/lista/feminino">
+                        <button type="button" class="btn btn-secondary btn-sm">Feminino</button>
+                    </a>
+                    
+                </div>
+                <h3>
+                    Lista Pessoas 
+                </h3>
+                <div style="padding: 20px; color: black;" class="row">
+                    <div class="col  btn btn-success">
+                        Nome
+                    </div>
+                    <div class="col btn btn-success">
+                        Sobrenome
+                    </div>
+                    <div class="col btn btn-success">
+                        CPF
+                    </div>
+                    <div class="col btn  btn-success">
+                        Data de nascimento
+                    </div>
+                    <div class="col btn btn-success">
+                        Sexo:
+                    </div>
+                </div>
+               
+                <% pessoas.forEach((el) =>{ %>
+                    <div style="padding: 20px; color: black;" class="row">
+                    <div class="col  ">
+                        <%= el.nome%>
+                    </div>
+                    <div class="col ">
+                        <%= el.sobrenome%>
+
+                    </div>
+                    <div class="col ">
+                        <%= el.cpf%>
+                    </div>
+                    <div class="col">
+                        <%= el.data%>
+
+                    </div>
+                    <div class="col">
+                        <%= el.sexo%>
+
+                    </div>
+                    <a href="/editar/<%= el.id %>">
+
+                        <button class="btn btn-dark">Editar</button>
+                    </a>
+                </div>
+                    <%     }) %>
+                    <a href="/">
+                        <button   style="color:black"class="btn btn-info">
+                            Page Home 
+                        </button>
+                    </a>
+        </div>
+    </div>
+</body>
+</html>

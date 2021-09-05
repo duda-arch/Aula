@@ -1,0 +1,36 @@
+
+###Unica Configuração 
+
+Entrar na pasta Database  editar o arquivo connection onde diz password : 'senhaFake' colocar sua senha do MYSQL 
+
+
+ ### Entrar no Terminal SQL 
+
+- CREATE DATABASE aula; 
+- exit; 
+
+### No terminal normal 
+
+- Entrar na pasta do projeto e entrar em Database  pelo terminal 
+
+- Digitar  mysql -u root -p aula <  database.sql 
+
+
+### Como rodar 
+
+baixar o  NODEJS  
+
+baixar o NPM 
+
+###Comandos pra inicar 
+
+##Entrar no projeto no terminal 
+    
+    npm install ## Usar apenas uma vez pra baixar  as dependencias Depois  usar apenas o node index.js pra inicar o projeto 
+
+    node index.js 
+    
+Link Do Projeto 
+
+       ((((((((( http://localhost:9897 )))))))))
+
