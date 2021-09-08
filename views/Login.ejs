@@ -1,0 +1,89 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.8.0/basic/ckeditor.js"></script>
+
+
+<div class="ever" >
+  <% if(err){ %>
+    <div class="container mt-4">
+      <a href="/">
+        <button class="btn btn-warning">
+          Cadastrar
+        </button>
+      </a>
+
+        <div style="background-color: #333; padding: 10px; font-size: 20px; border-radius: 10px; color: black;" class="row mt-4">
+                <%= msg%>
+              </div>
+            </div>
+    <% } %>
+    
+<div  style="margin-top:30px; " class="container  sumir">
+    <div class="row">
+        <div class="col">
+
+<form action="/login3"  method="POST" class="form-horizontal">
+    <fieldset>
+    <div style="color: black;" class="panel panel-primary">
+        <div style="color: black; background-color:rgb(116, 114, 114)" class="panel-heading">Efetuar Login</div>
+        
+        <div class="panel-body">
+    <div class="form-group">
+    
+    <div class="col-md-11 control-label">
+            <p class="help-block"><h11>*</h11> Campo Obrigatório </p>
+    </div>
+    </div>
+    <!-- Text input-->
+  
+
+    <div class="row form-group ">
+        <div class="col-5">
+      <label class="control-label" for="Nome">Nome <h11>*</h11></label>  
+
+          <input type="text"  name="nome" class="form-control" placeholder="First name">
+        </div>
+        <div class="col-5">
+        <label style="display: flex;" class=" col-md-2 control-label" for="Nome">CPF <h11>*</h11></label>  
+
+          <input type="text" name='cpf' class="form-control" placeholder="CPF">
+
+          
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="Cadastrar"></label>
+            <div class="col-md-8 mt-5">
+              <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Logar</button>
+      
+           
+            </div>
+          </div>
+      </div>
+      
+    </div>
+    
+   
+    
+
+    
+    </div>
+    </div>
+    
+    </fieldset>
+    </form>
+</div>
+
+</div>
+</div>    
+</div>
+<style>
+  body{
+      background-color: darkgray;
+  }
+</style>

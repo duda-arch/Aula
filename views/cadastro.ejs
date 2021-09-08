@@ -1,0 +1,122 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.8.0/basic/ckeditor.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<head>
+  
+
+
+<div class="ever">
+
+    <div style="margin-top:30px"  class="container  ">
+        <div class="row">
+            <div class="col">
+    
+    <form action="/"  method="POST" class="form-horizontal">
+        <fieldset>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Cadastrar Usuarios</div>
+            
+            <div class="panel-body">
+        <div class="form-group">
+        
+        <div class="col-md-11 control-label">
+                <p class="help-block"><h11>*</h11> Campo Obrigatório </p>
+        </div>
+        </div>
+        <!-- Text input-->
+      
+    
+        <div class="row form-group ">
+            <div class="col-5">
+          <label class="control-label" for="Nome">Nome <h11>*</h11></label>  
+    
+              <input type="text"  name="nome" class="form-control" placeholder="First name">
+            </div>
+            <div class="col-5">
+            <label style="display: flex;" class=" col-md-2 control-label" for="Nome">Sobrenome <h11>*</h11></label>  
+    
+              <input type="text" name='sobrenome' class="form-control" placeholder="Last name">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="Nome">CPF <h11>*</h11></label>  
+          <div class="col-md-2">
+          <input id="cpf" name="cpf" placeholder="Apenas números" class="form-control input-md" required="" type="text" maxlength="11" pattern="[0-9]+$">
+          </div>
+          
+          <label class="col-md-1 control-label" for="Nome">Nascimento<h11>*</h11></label>  
+          <div class="col-md-2">
+          <input id="data" name="data" placeholder="DD/MM/AAAA" class="form-control input-md" required="" type="date" maxlength="10" OnKeyPress="formatar('##/##/####', this)" onBlur="showhide()">
+        </div>
+        
+        <!-- Multiple Radios (inline) -->
+        
+          <label class="col-md-1 control-label" for="radios">Sexo? <h11>*</h11></label>
+          <div class="col-md-4"> 
+            <label required="" class="radio-inline" for="radios-0" >
+              <input name="sexo" id="sexo" value="masculino" type="radio" required>
+              masculino
+            </label> 
+            <label class="radio-inline" for="radios-1">
+              <input name="sexo" id="sexo" value="feminino" type="radio">
+                Feminino
+            </label>
+          </div>
+        </div>
+        
+        
+        
+        <!-- Button (Double) -->
+        <div class="form-group">
+          <label class="col-md-2 control-label" for="Cadastrar"></label>
+          <div class="col-md-8">
+            <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+    
+         
+          </div>
+        </div>
+        
+        </div>
+        </div>
+        
+        </fieldset>
+        </form>
+    </div>
+    
+    </div>
+    </div>    
+    </head>
+  
+</div>
+
+<script>
+  function mudar(){
+    const sumir  = document.getElementById('sumir')
+
+    if(sumir.style.visibility == 'hidden'){
+      sumir.style.visibility == 'visible'
+    }else{
+      sumir.style.visibility == 'hidden'
+      
+    }
+  }
+
+  </script>
+  <style>
+    body{
+        background-color: darkgray;
+    }
+</style>

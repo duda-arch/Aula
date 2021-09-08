@@ -18,6 +18,21 @@
     <title>Document</title>
 </head>
 <body>
+    <%if(log){ %> 
+        <div class="container">
+            <div style="background-color: darkseagreen; padding: 10px;" class="row mt-5 ml-6">
+                <div class="col">
+
+                </div><div style="font-size: 30px;" class="col">
+
+                    <span style="color:red">Usuario:</span><span style="color: black;">
+                        <%=user%>
+                    </span>
+                </div>
+            </div>
+        </div>
+    
+    <% }%>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -54,7 +69,7 @@
                 </div>
                
                 <% pessoas.forEach((el) =>{ %>
-                    <div style="padding: 20px; color: black;" class="row">
+                    <div style="padding: 20px; color: black; background-color: whitesmoke; padding: 10px; border-radius: 10px;" class="row">
                     <div class="col  ">
                         <%= el.nome%>
                     </div>
@@ -73,18 +88,31 @@
                         <%= el.sexo%>
 
                     </div>
-                    <a href="/editar/<%= el.id %>">
+                    <form action="/delete" method="post">
+                        <a href="/editar/<%= el.id %>">
+                            <button type="button" class="btn btn-dark">Editar</button>
 
-                        <button class="btn btn-dark">Editar</button>
-                    </a>
+                        </a>
+                        <input type="hidden" name="delete" value="<%=el.cpf%>">
+
+                     
+
+                        <button style="color: black;" type="submit"  class="btn btn-danger btn-sm">Excluir</button>
+                    </form>
                 </div>
                     <%     }) %>
                     <a href="/">
-                        <button   style="color:black"class="btn btn-info">
-                            Page Home 
+                        <button   style="color:black"class="btn btn-info mt-5">
+                            Page Login 
                         </button>
                     </a>
         </div>
     </div>
 </body>
 </html>
+
+<style>
+    body{
+        background-color: darkgray;
+    }
+</style>

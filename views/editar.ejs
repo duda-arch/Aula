@@ -36,19 +36,19 @@
                     Lista Pessoas 
                 </h3>
                 <div style="padding: 20px; color: black;" class="row">
-                    <div class="col  btn btn-success">
+                    <div class="col help  btn btn-success">
                         Nome
                     </div>
-                    <div class="col btn btn-success">
+                    <div class="col help btn btn-success">
                         Sobrenome
                     </div>
-                    <div class="col btn btn-success">
+                    <div class="col help btn btn-success">
                         CPF
                     </div>
-                    <div class="col btn  btn-success">
+                    <div class="col help btn  btn-success">
                         Data de nascimento
                     </div>
-                    <div class="col btn btn-success">
+                    <div class="col help btn btn-success">
                         Sexo:
                     </div>
                 </div>
@@ -57,39 +57,51 @@
                 <% pessoas.forEach((el) =>{ %>
                     <div style="padding: 20px; color: black;" class="row">
                         <div class="col  ">
-                            <input value="<%= el.nome%>" name="nome" type="text">
+                            <input value="<%= el.nome%>" class="form-control input-md" name="nome" type="text">
                     </div>
                     <div class="col ">
-                        <input value="<%= el.sobrenome%>" name="sobrenome" type="text">
+                        <input value="<%= el.sobrenome%>" class="form-control input-md" name="sobrenome" type="text">
                         
 
                     </div>
                     <div class="col ">
-                        <input value="<%= el.cpf%>"  name="cpf"" type="text">
+                        <input value="<%= el.cpf%>"  class="form-control input-md" name="cpf"" type="text">
 
                     </div>
                     <div class="col">
-                        <input value="<%= el.data%>" name="data" type="text">
+                        <input value="<%= el.data%>" class="form-control input-md" name="data" type="text">
                         
                         
                     </div>
                     <div class="col">
-                        <input value="<%= el.sexo%>" name="sexo" type="text">
+                        <input value="<%= el.sexo%>" class="form-control input-md" name="sexo" type="text">
 
-                        <input value="<%= el.id%>" name="id" type="hidden">
+                        <input value="<%= el.id%>" class="form-control input-md" name="id" type="hidden">
                         
                     </div>
-                    <button type="submit">Enviar </button>
+                    <button class="btn btn-dark mt-4" type="submit">Enviar </button>
                 </form>
                     
                 </div>
                     <%     }) %>
-                    <a href="/">
+                    <a href="/lista">
                         <button   style="color:black"class="btn btn-info">
-                            Page Home 
+                            Voltar
                         </button>
                     </a>
         </div>
     </div>
 </body>
 </html>
+
+<style>
+    .help{
+        color:black;
+        font-size: 16px;
+    }
+</style>
+<style>
+    body{
+        background-color: darkgray;
+    }
+</style>
